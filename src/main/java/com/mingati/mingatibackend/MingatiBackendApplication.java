@@ -43,10 +43,6 @@ public class MingatiBackendApplication {
         String ip= server.getIp();
         System.out.println(ip);
 
-        //checking the details of the connected client
-        Serverlistener.clientConncted(instance,out);
-
-
         InetAddress localhost = null;
 
         try {
@@ -67,7 +63,11 @@ public class MingatiBackendApplication {
         //1st client
         System.out.println( client.isConnected());
         //2nd client
-        System.out.println( " 2 "  +client2.isConnected());
+        System.out.println( "Client of second ip address "  +client2.isConnected());
+
+
+        //checking the details of the connected client
+        Serverlistener.clientConncted(instance,out);
     }
 
 }
